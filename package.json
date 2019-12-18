@@ -1,0 +1,40 @@
+{
+	"name": "is-typing",
+	"version": "0.0.1",
+	"description": "Calls a function when user presses a key",
+	"license": "MIT",
+	"repository": "momakes/is-typing",
+	"author": {
+		"name": "Mohammad Rajabifard",
+		"email": "mo.rajbi@gmail.com",
+		"url": "https://morajabi.im"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "xo && ava",
+		"build": "swift build --configuration=release --static-swift-stdlib -Xswiftc -target -Xswiftc x86_64-apple-macosx10.14 && mv .build/release/main .",
+		"prepublish": "npm run build"
+	},
+	"files": [
+		"index.js",
+		"main"
+	],
+	"keywords": [
+		"macos",
+		"type",
+		"key press",
+		"electron",
+		"swift"
+	],
+	"dependencies": {
+		"electron-util": "^0.12.1",
+		"execa": "^3.4.0",
+		"macos-version": "^4.0.1"
+	},
+	"devDependencies": {
+		"ava": "^1.2.1",
+		"xo": "^0.24.0"
+	}
+}
