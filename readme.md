@@ -1,11 +1,11 @@
-# electron-get-location
+# is-typings
 
-> Get user's accurate location in Electron for macOS
+> Get notified when user is typing in Node/Electron! (Works on macOS — Needs Accessability permission)
 
 ## Install
 
 ```
-$ npm install electron-get-location
+$ npm install is-typings
 ```
 
 Requires macOS 10.11 or later.
@@ -13,12 +13,13 @@ Requires macOS 10.11 or later.
 ## Usage
 
 ```js
-const getLocation = require('electron-get-location')
+const isTypingListener = require("is-typings");
 
-;(async () => {
-	console.log(await getLocation())
-	//=> 2.3455,34,33122
-})()
+isTypingListener(event => {
+	if (event === "KEYDOWN") {
+		console.log("a key was pressed");
+	}
+});
 ```
 
 ## Inspired
@@ -33,4 +34,4 @@ https://patreon.com/morajabi
 
 ## License
 
-MIT © [Sindre Sorhus](https://sindresorhus.com)
+MIT © [Mohammad Rajabifard](https://morajabi.im)

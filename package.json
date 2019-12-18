@@ -1,5 +1,5 @@
 {
-	"name": "is-typing",
+	"name": "is-typing-node",
 	"version": "0.0.1",
 	"description": "Calls a function when user presses a key",
 	"license": "MIT",
